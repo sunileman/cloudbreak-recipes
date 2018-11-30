@@ -13,7 +13,7 @@ sudo -u postgres createuser druid;
 sudo -u postgres psql -c "create database druid;"
 
 
-sudo -u postgres psql -c "alter user druid with encrypted password '*****'";
+sudo -u postgres psql -c "alter user druid with encrypted password 'admin'";
 
 sudo -u postgres psql -c "grant all privileges on database druid to druid";
 
