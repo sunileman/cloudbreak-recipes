@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo useradd -m nifi
+sudo usermod -a -G hadoop nifi
+sudo usermod -a -G hdfs nifi
+
+
+sudo su - hdfs -c "hdfs dfs -mkdir /user/nifi"
+
+sudo su - hdfs -c "hdfs dfs -chown nifi:hdfs /user/nifi"
+
+
+sudo su - hive -c "hdfs dfs -setfacl -m default:group:hadoop:rwx /warehouse/tablespace/managed/hive"
+
+sudo su - hive -c "hdfs dfs -setfacl -m group::rwx /warehouse/tablespace/managed/hive"
