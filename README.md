@@ -8,4 +8,4 @@ Fetches approx 113 million airline data records and stores in hive table. Post a
 
 
 <b>Setup NiFi user on HDP for Hive Streaming/b><br>
-Scripts sets up nifi user, creates appropriates directories in hdfs, and sets ACL for hive warehouse directory.  This this the nifi user will fail to stream data into hive.  this is for unsecured poc cluster.
+Scripts sets up nifi user, creates appropriates directories in hdfs, and sets ACL for hive warehouse directory.  Without this the nifi user will fail to stream data into hive.  this is for unsecured poc cluster.
